@@ -544,7 +544,7 @@ same_list = []
 dif_list = []
 dvoyki = {}
 podchet_1 =0
-for i in range(222, 1222):  # while (ik < 1): # количество файлов
+for i in range(1200, 1286):  # while (ik < 1): # количество файлов
     # ik = ik + 1
     # file_obj = open('200cikl_ochh.txt', 'w')
     # file_obj.close()
@@ -579,7 +579,7 @@ for i in range(222, 1222):  # while (ik < 1): # количество файло�
         
         key1 = key
         steps = steps + 1
-        if key1 == 22:
+        if key1 == 23:
             podchet_1 = podchet_1+1
         if old_key > -1:
             # list_dvoek.append( str(key1) + '  ' + str(old_key))

@@ -609,7 +609,7 @@ dvoyki = get_counts(list_dvoek)
 # print('dvoyki: ', dvoyki)
 import operator
 
-sorted_dvoyki = sorted(dvoyki.items(), key=operator.itemgetter(0))
+sorted_dvoyki = sorted(dvoyki.items(), key=operator.itemgetter(1),reverse=True)
 
 print('sorted_dvoyki: ', sorted_dvoyki)
 # print('pribyl2: ', pribyl2)
