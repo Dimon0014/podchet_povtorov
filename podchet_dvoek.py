@@ -579,7 +579,7 @@ for i in range(1200, 1286):  # while (ik < 1): # количество файло
         
         key1 = key
         steps = steps + 1
-        if key1 == 23:
+        if key1 == 17:
             podchet_1 = podchet_1+1
         if old_key > -1:
             # list_dvoek.append( str(key1) + '  ' + str(old_key))
