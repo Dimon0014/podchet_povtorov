@@ -546,7 +546,8 @@ dif_list = []
 dvoyki = {}
 podchet_1 =0
 podchet_17 =0
-for i in range(222, 1200):  # while (ik < 1): # количество файлов
+pribul_17 =0
+for i in range(222, 1286):  # while (ik < 1): # количество файлов
     # ik = ik + 1
     # file_obj = open('200cikl_ochh.txt', 'w')
     # file_obj.close()
@@ -588,8 +589,9 @@ for i in range(222, 1200):  # while (ik < 1): # количество файло�
         if old_key > -1:
             # list_dvoek.append( str(key1) + '  ' + str(old_key))
             list_dvoek.append( (old_key,key1))
-        
-        # print(steps,'old:',old_key, ' key:',key1, '--- sam: ', same, ' lev: ', levo, ' prv: ', pravo, ' nol: ', nolik)
+        if old_key == 17 and key1 == 7:
+            pribul_17 = pribul_17 +36
+            # print(steps,'old:',old_key, ' key:',key1, '--- sam: ', same, ' lev: ', levo, ' prv: ', pravo, ' nol: ', nolik)
         old_key = key1
     # print('111111111111111111111111111111111111111111111111111111111111111111111111111111111')
     
@@ -617,5 +619,6 @@ sorted_17 = sorted(after17.items(), key=operator.itemgetter(1), reverse=True)
 print('17: ', podchet_17)
 print('sorted_dvoyki: ', sorted_dvoyki)
 print('sorted 17: ', sorted_17)
+print('itog: ',pribul_17 - podchet_17)
 # print('pribyl2: ', pribyl2)
 # print('real_pribyl_all: ', real_pribyl)

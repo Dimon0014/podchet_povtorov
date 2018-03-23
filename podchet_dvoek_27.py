@@ -539,14 +539,15 @@ nolik = 0
 dub_nolik = 0
 dif = 0
 same = 0
-list_17 = []
+list_27 = []
 list_dvoek = []
 same_list = []
 dif_list = []
 dvoyki = {}
 podchet_1 =0
-podchet_17 =0
-for i in range(222, 1200):  # while (ik < 1): # количество файлов
+podchet_27 =0
+pribul_27 =0
+for i in range(222, 1286):  # while (ik < 1): # количество файлов
     # ik = ik + 1
     # file_obj = open('200cikl_ochh.txt', 'w')
     # file_obj.close()
@@ -581,14 +582,15 @@ for i in range(222, 1200):  # while (ik < 1): # количество файло�
         
         key1 = key
         steps = steps + 1
-        if old_key == 17:
-            list_17.append((old_key,key1))
-        if key1 == 17:
-            podchet_17 = podchet_17+1
+        if old_key == 27:
+            list_27.append((old_key,key1))
+        if key1 == 27:
+            podchet_27 = podchet_27+1
         if old_key > -1:
             # list_dvoek.append( str(key1) + '  ' + str(old_key))
             list_dvoek.append( (old_key,key1))
-        
+        if old_key == 27 and key1 == 35:
+            pribul_27 = pribul_27 +36
         # print(steps,'old:',old_key, ' key:',key1, '--- sam: ', same, ' lev: ', levo, ' prv: ', pravo, ' nol: ', nolik)
         old_key = key1
     # print('111111111111111111111111111111111111111111111111111111111111111111111111111111111')
@@ -608,14 +610,15 @@ print('---------------------------------------')
 
 # print('list_dvoek: ',list_dvoek)
 dvoyki = get_counts(list_dvoek)
-after17 = get_counts(list_17)
+after27 = get_counts(list_27)
 # print('dvoyki: ', dvoyki)
 import operator
 
 sorted_dvoyki = sorted(dvoyki.items(), key=operator.itemgetter(1), reverse=True)
-sorted_17 = sorted(after17.items(), key=operator.itemgetter(1), reverse=True)
-print('17: ', podchet_17)
+sorted_27 = sorted(after27.items(), key=operator.itemgetter(1), reverse=True)
+print('27: ', podchet_27)
 print('sorted_dvoyki: ', sorted_dvoyki)
-print('sorted 17: ', sorted_17)
+print('sorted 27: ', sorted_27)
+print('itog: ',pribul_27 - podchet_27)
 # print('pribyl2: ', pribyl2)
 # print('real_pribyl_all: ', real_pribyl)
