@@ -547,7 +547,7 @@ dvoyki = {}
 podchet_1 =0
 podchet_17 =0
 pribul_17 =0
-for i in range(222, 1286):  # while (ik < 1): # количество файлов
+for i in range(222, 600):  # while (ik < 1): # количество файлов
     # ik = ik + 1
     # file_obj = open('200cikl_ochh.txt', 'w')
     # file_obj.close()
@@ -573,6 +573,7 @@ for i in range(222, 1286):  # while (ik < 1): # количество файло�
     key1 = key
     steps = 0
     old_key = -1
+    old_key2 = -1
     # print("выборка",len(viborka))
     chet = 0
     nechet = 0
@@ -582,8 +583,8 @@ for i in range(222, 1286):  # while (ik < 1): # количество файло�
         
         key1 = key
         steps = steps + 1
-        if old_key == 17:
-            list_17.append((old_key,key1))
+        if old_key2 == 17:
+            list_17.append((old_key2,key1))
         if key1 == 17:
             podchet_17 = podchet_17+1
         if old_key > -1:
@@ -592,7 +593,9 @@ for i in range(222, 1286):  # while (ik < 1): # количество файло�
         if old_key == 17 and key1 == 7:
             pribul_17 = pribul_17 +36
             # print(steps,'old:',old_key, ' key:',key1, '--- sam: ', same, ' lev: ', levo, ' prv: ', pravo, ' nol: ', nolik)
+        old_key2 = old_key
         old_key = key1
+
     # print('111111111111111111111111111111111111111111111111111111111111111111111111111111111')
     
     # same_list.append(same)

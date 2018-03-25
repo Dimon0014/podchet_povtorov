@@ -520,7 +520,33 @@ def get_counts(sequence):
         else:
             counts[item] = 1
     return counts
-
+def podchet_shansov_k_3(list):
+    list2 =[0, 0, 0, 0]
+    nulik = 0
+    ferst=0
+    second = 0
+    ferd = 0
+    i =0
+    for i in range(len(list)):
+        if (list[i][0][1] == 0):
+            nulik = nulik + list[i][1]
+        elif (list[i][0][1] == 1) or (list[i][0][1] == 4) or (list[i][0][1] == 7) or (list[i][0][1] == 10) or (
+                    list[i][0][1] == 13) or (list[i][0][1] == 16) or (list[i][0][1] == 19) or (list[i][0][1] == 22) or (
+                    list[i][0][1] == 25) or (list[i][0][1] == 28) or (list[i][0][1] == 31) or (list[i][0][1] == 34):
+            ferst = ferst+ list[i][1]
+        elif (list[i][0][1] == 2) or (list[i][0][1] == 5) or (list[i][0][1] == 8) or (list[i][0][1] == 11) or (
+                    list[i][0][1] == 14) or (list[i][0][1] == 17) or (list[i][0][1] == 20) or (list[i][0][1] == 23) or (
+                    list[i][0][1] == 26) or (list[i][0][1] == 29) or (list[i][0][1] == 32) or (list[i][0][1] == 35):
+            second = second + list[i][1]
+        elif (list[i][0][1] == 3) or (list[i][0][1] == 6) or (list[i][0][1] == 9) or (list[i][0][1] == 12) or (
+                    list[i][0][1] == 15) or (list[i][0][1] == 18) or (list[i][0][1] == 21) or (list[i][0][1] == 24) or (
+                    list[i][0][1] == 27) or (list[i][0][1] == 30) or (list[i][0][1] == 33) or (list[i][0][1] == 36):
+            ferd = ferd + list[i][1]
+    list2[0] = nulik
+    list2[1] = ferst
+    list2[2] = second
+    list2[3] = ferd
+    return list2
 
 rasnica2 = 0
 ik = 0
@@ -547,7 +573,7 @@ dvoyki = {}
 podchet_1 =0
 podchet_17 =0
 pribul_17 =0
-for i in range(222, 1286):  # while (ik < 1): # количество файлов
+for i in range(1287, 1509):  # while (ik < 1): # количество файлов
     # ik = ik + 1
     # file_obj = open('200cikl_ochh.txt', 'w')
     # file_obj.close()
@@ -622,3 +648,6 @@ print('sorted 17: ', sorted_17)
 print('itog: ',pribul_17 - podchet_17)
 # print('pribyl2: ', pribyl2)
 # print('real_pribyl_all: ', real_pribyl)
+print('proba: ',sorted_17[0][0][1], sorted_17[0][1])
+
+print('podchet: ', podchet_shansov_k_3(sorted_17))

@@ -539,15 +539,15 @@ nolik = 0
 dub_nolik = 0
 dif = 0
 same = 0
-list_17 = []
+list_18 = []
 list_dvoek = []
 same_list = []
 dif_list = []
 dvoyki = {}
 podchet_1 =0
-podchet_17 =0
-pribul_17 =0
-for i in range(222, 1286):  # while (ik < 1): # количество файлов
+podchet_18 =0
+pribul_18 =0
+for i in range(1287, 1509):  # while (ik < 1): # количество файлов
     # ik = ik + 1
     # file_obj = open('200cikl_ochh.txt', 'w')
     # file_obj.close()
@@ -576,21 +576,21 @@ for i in range(222, 1286):  # while (ik < 1): # количество файло�
     # print("выборка",len(viborka))
     chet = 0
     nechet = 0
-
+    
     while (steps < len(viborka)):
         key = viborka[steps]
         
         key1 = key
         steps = steps + 1
-        if old_key == 17:
-            list_17.append((old_key,key1))
-        if key1 == 17:
-            podchet_17 = podchet_17+1
+        if old_key == 18:
+            list_18.append((old_key,key1))
+        if key1 == 18:
+            podchet_18 = podchet_18+1
         if old_key > -1:
             # list_dvoek.append( str(key1) + '  ' + str(old_key))
             list_dvoek.append( (old_key,key1))
-        if old_key == 17 and key1 == 7:
-            pribul_17 = pribul_17 +36
+        if old_key == 18 and key1 == 7:
+            pribul_18 = pribul_18 +36
             # print(steps,'old:',old_key, ' key:',key1, '--- sam: ', same, ' lev: ', levo, ' prv: ', pravo, ' nol: ', nolik)
         old_key = key1
     # print('111111111111111111111111111111111111111111111111111111111111111111111111111111111')
@@ -610,15 +610,15 @@ print('---------------------------------------')
 
 # print('list_dvoek: ',list_dvoek)
 dvoyki = get_counts(list_dvoek)
-after17 = get_counts(list_17)
+after18 = get_counts(list_18)
 # print('dvoyki: ', dvoyki)
 import operator
 
 sorted_dvoyki = sorted(dvoyki.items(), key=operator.itemgetter(1), reverse=True)
-sorted_17 = sorted(after17.items(), key=operator.itemgetter(1), reverse=True)
-print('17: ', podchet_17)
+sorted_18 = sorted(after18.items(), key=operator.itemgetter(1), reverse=True)
+print('18: ', podchet_18)
 print('sorted_dvoyki: ', sorted_dvoyki)
-print('sorted 17: ', sorted_17)
-print('itog: ',pribul_17 - podchet_17)
+print('sorted 18: ', sorted_18)
+print('itog: ',pribul_18 - podchet_18)
 # print('pribyl2: ', pribyl2)
 # print('real_pribyl_all: ', real_pribyl)
