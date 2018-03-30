@@ -547,7 +547,7 @@ dvoyki = {}
 podchet_1 =0
 podchet_17 =0
 pribul_17 =0
-for i in range(222, 1286):  # while (ik < 1): # количество файлов
+for i in range(1500, 1600):  # while (ik < 1): # количество файлов
     # ik = ik + 1
     # file_obj = open('200cikl_ochh.txt', 'w')
     # file_obj.close()
