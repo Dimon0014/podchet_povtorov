@@ -512,6 +512,96 @@ def podchet_balansa(spisok):
     return pribyl
 
 
+def podchet_balansa2(spisok):
+    pribyl = 0
+    for item in spisok:
+        if item == 1:
+            pribyl = pribyl + 0.35  # - (item*0.01)
+        if item == 2:
+            pribyl = pribyl + 0.34  # - (item*0.01)
+        if item == 3:
+            pribyl = pribyl + 0.33  # - (item*0.01)
+        
+        if item == 4:
+            pribyl = pribyl + 0.32  # - (item*0.01)
+        
+        if item == 5:
+            pribyl = pribyl + 0.31  # - (item*0.01)
+        
+        if item == 6:
+            pribyl = pribyl + 0.30  # - (item*0.01)
+        ########################################################## +0.06
+        if item == 7:
+            pribyl = pribyl + 0.29  # - (item*0.01)
+        
+        if item == 8:
+            pribyl = pribyl + 0.28  # - (item*0.01)
+        if item == 9:
+            pribyl = pribyl + 0.27  # - (item*0.01)
+        if item == 10:
+            pribyl = pribyl + 0.26  # - (item*0.01)
+        if item == 11:
+            pribyl = pribyl + 0.25  # - (item*0.01)
+        if item == 11:
+            pribyl = pribyl + 0.24  # - (item*0.01)
+        if item == 12:
+            pribyl = pribyl + 0.23  # - (item*0.01)
+        if item == 13:
+            pribyl = pribyl + 0.22  # - (item*0.01)
+        if item == 14:
+            pribyl = pribyl + 0.21  # - (item*0.01)
+        if item == 15:
+            pribyl = pribyl + 0.20  # - (item*0.01)
+        if item == 16:
+            pribyl = pribyl + 0.19  # - (item*0.01)
+        if item == 17:
+            pribyl = pribyl + 0.18  # - (item*0.01)
+        if item == 18:
+            pribyl = pribyl + 0.17  # - (item*0.01)
+        if item == 19:
+            pribyl = pribyl + 0.16  # - (item*0.01)
+        if item == 20:
+            pribyl = pribyl + 0.15  # - (item*0.01)
+        if item == 21:
+            pribyl = pribyl + 0.14  # - (item*0.01)
+        if item == 22:
+            pribyl = pribyl + 0.13  # - (item*0.01)
+        if item == 23:
+            pribyl = pribyl + 0.12  # - (item*0.01)
+        ###########################################################      +0.36 =0.42
+        if item == 24:
+            pribyl = pribyl + 0.11  # - (item*0.01)
+        
+        if item == 25:
+            pribyl = pribyl + 0.10  # - (item*0.01)
+        if item == 26:
+            pribyl = pribyl + 0.09  # - (item*0.01)
+        if item == 27:
+            pribyl = pribyl + 0.08  # - (item*0.01)
+        if item == 28:
+            pribyl = pribyl + 0.07  # - (item*0.01)
+        if item == 29:
+            pribyl = pribyl + 0.06  # - (item*0.01)
+        if item == 30:
+            pribyl = pribyl + 0.05  # - (item*0.01)
+        if item == 31:
+            pribyl = pribyl + 0.04  # - (item*0.01)
+        if item == 32:
+            pribyl = pribyl + 0.03  # - (item*0.01)
+        if item == 33:
+            pribyl = pribyl + 0.02  # - (item*0.01)
+        if item == 34:
+            pribyl = pribyl + 0.01  # - (item*0.01)
+        if item == 35:
+            pribyl = pribyl + 0.0  # - (item*0.01)
+        if item == 36:
+            pribyl = pribyl - 0.01  # - (item*0.01)
+        if item > 36:
+            pribyl = pribyl - 0.36  # - (item*0.01)
+    
+    return pribyl
+
+
 def get_counts(sequence):
     counts = {}
     for item in sequence:
@@ -547,7 +637,10 @@ dvoyki = {}
 podchet_1 =0
 podchet_19 =0
 pribul_19 =0
-for i in range(1509, 1634):  # while (ik < 1): # количество файлов
+podchet_19_14 =0
+global_shagi = 0
+list_promejutkov =[]
+for i in range(1600, 1634):  # while (ik < 1): # количество файлов
     # ik = ik + 1
     # file_obj = open('200cikl_ochh.txt', 'w')
     # file_obj.close()
@@ -582,16 +675,22 @@ for i in range(1509, 1634):  # while (ik < 1): # количество файло
         
         key1 = key
         steps = steps + 1
+        global_shagi = global_shagi + 1
         if old_key == 19:
             list_19.append((old_key,key1))
         if key1 == 19:
-            podchet_19 = podchet_19+1
+            podchet_19 = podchet_19 + 1
         if old_key > -1:
             # list_dvoek.append( str(key1) + '  ' + str(old_key))
             list_dvoek.append( (old_key,key1))
-        if old_key == 19 and key1 == 17:
+        if old_key == 19 and key1 == 14:
+            podchet_19_14 = podchet_19_14 + 1
             pribul_19 = pribul_19 +36
-        # print(steps,'old:',old_key, ' key:',key1, '--- sam: ', same, ' lev: ', levo, ' prv: ', pravo, ' nol: ', nolik)
+            list_promejutkov.append(podchet_19)
+            print('glob_hsag:', global_shagi, 'sootnoshenie:', podchet_19,podchet_19_14, '  ', naime_file)
+            # print(steps,'old:',old_key, ' key:',key1, '--- sam: ', same, ' lev: ', levo, ' prv: ', pravo, ' nol: ', nolik)
+            podchet_19 = 0
+            podchet_19_14 = 0
         old_key = key1
     # print('111111111111111111111111111111111111111111111111111111111111111111111111111111111')
     
@@ -619,6 +718,6 @@ sorted_19 = sorted(after19.items(), key=operator.itemgetter(1), reverse=True)
 print('19: ', podchet_19)
 print('sorted_dvoyki: ', sorted_dvoyki)
 print('sorted 19: ', sorted_19)
-print('itog: ',pribul_19 - podchet_19)
+print('itog: ',podchet_balansa2(list_promejutkov))
 # print('pribyl2: ', pribyl2)
 # print('real_pribyl_all: ', real_pribyl)
