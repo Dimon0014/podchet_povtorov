@@ -629,18 +629,18 @@ nolik = 0
 dub_nolik = 0
 dif = 0
 same = 0
-list_17 = []
+list_3 = []
 list_dvoek = []
 same_list = []
 dif_list = []
 dvoyki = {}
 podchet_1 =0
-podchet_17 =0
-pribul_17 =0
-podchet_17_16 =0
+podchet_3 =0
+pribul_3 =0
+podchet_3_34 =0
 global_shagi = 0
 list_promejutkov =[]
-for i in range(222, 1634):  # while (ik < 1): # количество файлов
+for i in range(1500, 1634):  # while (ik < 1): # количество файлов
     # ik = ik + 1
     # file_obj = open('200cikl_ochh.txt', 'w')
     # file_obj.close()
@@ -676,23 +676,23 @@ for i in range(222, 1634):  # while (ik < 1): # количество файло�
         key1 = key
         steps = steps + 1
         global_shagi = global_shagi + 1
-        if old_key == 17:
-            list_17.append((old_key,key1))
-        if key1 == 17:
-            podchet_17 = podchet_17 + 1
+        if old_key == 3:
+            list_3.append((old_key,key1))
+        if key1 == 34:
+            podchet_3 = podchet_3 + 1
         if old_key > -1:
             # list_dvoek.append( str(key1) + '  ' + str(old_key))
             list_dvoek.append( (old_key,key1))
-        if old_key == 17 and key1 == 16:
-            podchet_17_16 = podchet_17_16 + 1
-            pribul_17 = pribul_17 +36
-            list_promejutkov.append(podchet_17)
-            print('glob_hsag:', global_shagi, 'sootnoshenie:', podchet_17,podchet_17_16, '  ', naime_file)
+        if old_key == 3 and key1 == 34:
+            podchet_3_34 = podchet_3_34 + 1
+            pribul_3 = pribul_3 +36
+            list_promejutkov.append(podchet_3)
+            print('glob_hsag:', global_shagi, 'sootnoshenie:', podchet_3,podchet_3_34, '  ', naime_file)
             # print(steps,'old:',old_key, ' key:',key1, '--- sam: ', same, ' lev: ', levo, ' prv: ', pravo, ' nol: ', nolik)
-            podchet_17 = 0
-            podchet_17_16 = 0
+            podchet_3 = 0
+            podchet_3_34 = 0
         old_key = key1
-    # print('111111111111111111111111111111111111111111111111111111111111111111111111111111111')
+    # print('111111301111111111111111111111111111111111111111111111111111111111111111111111111')
     
     # same_list.append(same)
     #
@@ -709,15 +709,15 @@ print('---------------------------------------')
 
 # print('list_dvoek: ',list_dvoek)
 dvoyki = get_counts(list_dvoek)
-after17 = get_counts(list_17)
+after3 = get_counts(list_3)
 # print('dvoyki: ', dvoyki)
 import operator
 
 sorted_dvoyki = sorted(dvoyki.items(), key=operator.itemgetter(1), reverse=True)
-sorted_17 = sorted(after17.items(), key=operator.itemgetter(1), reverse=True)
-print('17: ', podchet_17)
+sorted_3 = sorted(after3.items(), key=operator.itemgetter(1), reverse=True)
+print('3: ', podchet_3)
 print('sorted_dvoyki: ', sorted_dvoyki)
-print('sorted 17: ', sorted_17)
+print('sorted 3: ', sorted_3)
 print('itog: ',podchet_balansa2(list_promejutkov))
 # print('pribyl2: ', pribyl2)
 # print('real_pribyl_all: ', real_pribyl)
