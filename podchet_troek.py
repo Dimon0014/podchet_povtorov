@@ -543,7 +543,7 @@ list_dvoek = []
 same_list = []
 dif_list = []
 dvoyki = {}
-for i in range(222, 1222):  # while (ik < 1): # количество файлов
+for i in range(300, 400):  # while (ik < 1): # количество файлов
 	# ik = ik + 1
 	# file_obj = open('200cikl_ochh.txt', 'w')
 	# file_obj.close()
@@ -609,8 +609,13 @@ dvoyki = get_counts(list_dvoek)
 # print('dvoyki: ', dvoyki)
 import operator
 
-sorted_dvoyki = sorted(dvoyki.items(), key=operator.itemgetter(1),reverse=True)
+sorted_dvoyki = sorted(dvoyki.items(), key=operator.itemgetter(0))
 
 print('sorted_dvoyki: ', sorted_dvoyki)
+def vudacha(chislo1,chislo2, spisok):
+	for item in spisok:
+		if (item[0][0] == chislo1) and (item[0][1] == chislo2):
+		   print("sovpadenie:",item[0][0], item[0][1],item[0][2],item[1])
+vudacha(17,7, sorted_dvoyki)
 # print('pribyl2: ', pribyl2)
 # print('real_pribyl_all: ', real_pribyl)

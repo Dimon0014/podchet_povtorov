@@ -108,7 +108,7 @@ def intervals_of_2(key2step, key1step, dict2Glob,
         dict2Glob[(key2step, key1step)][1].append(last_seen)  # добавляем значение к списку последний раз видели
         count = len(dict2Glob[(key2step, key1step)][1])  # переменную переменную раз видели загоняем в буфер
         dict2Glob[(key2step, key1step)][2] = count
-    #  dict2Glob[(key2step,key1step)][3] = steps_sesia # количество шагов в сесии- нужно для предсказанияkey1step # первый символ ключа
+    # dict2Glob[(key2step,key1step)][3] = steps_sesia # количество шагов в сесии- нужно для предсказанияkey1step # первый символ ключа
     #  dict2Glob[(key2step,key1step)][4] = key2step # первый символ ключа
     #  dict2Glob[(key2step,key1step)][5] = key1step # второй символ ключа
     else:
@@ -512,96 +512,6 @@ def podchet_balansa(spisok):
     return pribyl
 
 
-def podchet_balansa2(spisok):
-    pribyl = 0
-    for item in spisok:
-        if item == 1:
-            pribyl = pribyl + 0.35  # - (item*0.01)
-        if item == 2:
-            pribyl = pribyl + 0.34  # - (item*0.01)
-        if item == 3:
-            pribyl = pribyl + 0.33  # - (item*0.01)
-        
-        if item == 4:
-            pribyl = pribyl + 0.32  # - (item*0.01)
-        
-        if item == 5:
-            pribyl = pribyl + 0.31  # - (item*0.01)
-        
-        if item == 6:
-            pribyl = pribyl + 0.30  # - (item*0.01)
-        ########################################################## +0.06
-        if item == 7:
-            pribyl = pribyl + 0.29  # - (item*0.01)
-        
-        if item == 8:
-            pribyl = pribyl + 0.28  # - (item*0.01)
-        if item == 9:
-            pribyl = pribyl + 0.27  # - (item*0.01)
-        if item == 10:
-            pribyl = pribyl + 0.26  # - (item*0.01)
-        if item == 11:
-            pribyl = pribyl + 0.25  # - (item*0.01)
-        if item == 11:
-            pribyl = pribyl + 0.24  # - (item*0.01)
-        if item == 12:
-            pribyl = pribyl + 0.23  # - (item*0.01)
-        if item == 13:
-            pribyl = pribyl + 0.22  # - (item*0.01)
-        if item == 14:
-            pribyl = pribyl + 0.21  # - (item*0.01)
-        if item == 15:
-            pribyl = pribyl + 0.20  # - (item*0.01)
-        if item == 16:
-            pribyl = pribyl + 0.19  # - (item*0.01)
-        if item == 17:
-            pribyl = pribyl + 0.18  # - (item*0.01)
-        if item == 18:
-            pribyl = pribyl + 0.17  # - (item*0.01)
-        if item == 19:
-            pribyl = pribyl + 0.16  # - (item*0.01)
-        if item == 20:
-            pribyl = pribyl + 0.15  # - (item*0.01)
-        if item == 21:
-            pribyl = pribyl + 0.14  # - (item*0.01)
-        if item == 22:
-            pribyl = pribyl + 0.13  # - (item*0.01)
-        if item == 23:
-            pribyl = pribyl + 0.12  # - (item*0.01)
-        ###########################################################      +0.36 =0.42
-        if item == 24:
-            pribyl = pribyl + 0.11  # - (item*0.01)
-        
-        if item == 25:
-            pribyl = pribyl + 0.10  # - (item*0.01)
-        if item == 26:
-            pribyl = pribyl + 0.09  # - (item*0.01)
-        if item == 27:
-            pribyl = pribyl + 0.08  # - (item*0.01)
-        if item == 28:
-            pribyl = pribyl + 0.07  # - (item*0.01)
-        if item == 29:
-            pribyl = pribyl + 0.06  # - (item*0.01)
-        if item == 30:
-            pribyl = pribyl + 0.05  # - (item*0.01)
-        if item == 31:
-            pribyl = pribyl + 0.04  # - (item*0.01)
-        if item == 32:
-            pribyl = pribyl + 0.03  # - (item*0.01)
-        if item == 33:
-            pribyl = pribyl + 0.02  # - (item*0.01)
-        if item == 34:
-            pribyl = pribyl + 0.01  # - (item*0.01)
-        if item == 35:
-            pribyl = pribyl + 0.0  # - (item*0.01)
-        if item == 36:
-            pribyl = pribyl - 0.01  # - (item*0.01)
-        if item > 36:
-            pribyl = pribyl - 0.36  # - (item*0.01)
-    
-    return pribyl
-
-
 def get_counts(sequence):
     counts = {}
     for item in sequence:
@@ -610,114 +520,252 @@ def get_counts(sequence):
         else:
             counts[item] = 1
     return counts
-
-
-rasnica2 = 0
-ik = 0
-vig = 0
-prg = 0
-chag = 0
-nol = 0
-real_pribyl = 0
-pribyl2 = 0
-neuch = ''
-neuch2 = 0
-i = 0
-next_nol = 0
-uchet_intervala = 0
-nolik = 0
-dub_nolik = 0
-dif = 0
-same = 0
-list_18 = []
-list_dvoek = []
-same_list = []
-dif_list = []
-dvoyki = {}
-podchet_1 =0
-podchet_18 =0
-pribul_18 =0
-podchet_18_2 =0
-global_shagi = 0
-list_promejutkov =[]
-for i in range(138, 222):  # while (ik < 1): # количество файлов
-    # ik = ik + 1
-    # file_obj = open('200cikl_ochh.txt', 'w')
-    # file_obj.close()
-    # file_obj = open('200cikl_ochh.txt', 'a')
-    # for i in range(200+1):               # количество ходов в файле
-    #     chislo = random.randint(0, 36)  # генерируем число
-    #     file_obj.write(str(chislo) + '\n')
-    #
-    # file_obj.close()
+cikl_v_rabote = True
+niz_granicu = 1400
+vrh_granicu = 1401
+konecc = 1600
+old_summa_of = 0
+list_of =[0,0,0]
+odin = 0
+dva = 0
+tri = 0
+rez_odin =0
+rez_dva = 0
+rez_tri =0
+rez_odin_str =''
+rez_dva_str = ''
+rez_tri_str =''
+while cikl_v_rabote:
+    rasnica2 = 0
+    ik = 0
+    vig = 0
+    prg = 0
+    chag = 0
+    nol = 0
+    real_pribyl = 0
+    pribyl2 = 0
+    neuch = ''
+    neuch2 = 0
+    i = 0
+    next_nol = 0
+    uchet_intervala = 0
+    nolik = 0
+    dub_nolik = 0
+    dif = 0
+    same = 0
+    list_dvoek = []
+    same_list = []
+    dif_list = []
+    dvoyki = {}
     
-    
-    naime_file = str(i) + 'cikl_och.txt'
-    viborka = []
-    file_obj = open(naime_file)
-    data_list = file_obj.readlines()
-    for line in data_list:
-        viborka.append(int(line))
-    # объявление всех переменных-----------------------------------------------------------------------------------
-    dic_ed = {}  # болванка под словарь едениц
-    # -----------------------------------------------------------------------------------
-    key = 0
-    steps_sesia = 1
-    key1 = key
-    steps = 0
-    old_key = -1
-    # print("выборка",len(viborka))
-    chet = 0
-    nechet = 0
-
-    while (steps < len(viborka)):
-        key = viborka[steps]
+    niz_granicu = niz_granicu + 0
+    vrh_granicu = vrh_granicu + 1
+    for i in range(niz_granicu, vrh_granicu):  # while (ik < 1): # количество файлов
+        # ik = ik + 1
+        # file_obj = open('200cikl_ochh.txt', 'w')
+        # file_obj.close()
+        # file_obj = open('200cikl_ochh.txt', 'a')
+        # for i in range(200+1):               # количество ходов в файле
+        #     chislo = random.randint(0, 36)  # генерируем число
+        #     file_obj.write(str(chislo) + '\n')
+        #
+        # file_obj.close()
         
+        
+        naime_file = str(i) + 'cikl_och.txt'
+        viborka = []
+        file_obj = open(naime_file)
+        data_list = file_obj.readlines()
+        for line in data_list:
+            viborka.append(int(line))
+        # объявление всех переменных-----------------------------------------------------------------------------------
+        dic_ed = {}  # болванка под словарь едениц
+        # -----------------------------------------------------------------------------------
+        key = 0
+        steps_sesia = 1
         key1 = key
-        steps = steps + 1
-        global_shagi = global_shagi+1
-        if old_key == 18:
-            list_18.append((old_key,key1))
-        if key1 == 18:
-            podchet_18 = podchet_18+1
-        if old_key > -1:
-            # list_dvoek.append( str(key1) + '  ' + str(old_key))
-            list_dvoek.append( (old_key,key1))
-        if old_key == 18 and key1 == 2:
-            podchet_18_2 = podchet_18_2+1
-            pribul_18 = pribul_18 +36
-            list_promejutkov.append(podchet_18)
-            print('glob_hsag:', global_shagi, 'sootnoshenie:',podchet_18, podchet_18_2, '  ',naime_file)
-            podchet_18 = 0
-            podchet_18_2 = 0
+        steps = 0
+        old_key1 = -1
+        old_key2 = -1
+        # print("выборка",len(viborka))
+        chet = 0
+        nechet = 0
+        
+        while (steps < len(viborka)):
+            key = viborka[steps]
+            
+            key1 = key
+            steps = steps + 1
+            
+            if old_key2 > -1:
+                list_dvoek.append((old_key2, old_key1, key1))
+                
+            
             # print(steps,'old:',old_key, ' key:',key1, '--- sam: ', same, ' lev: ', levo, ' prv: ', pravo, ' nol: ', nolik)
-        old_key = key1
-    # print('111111111111111111111111111111111111111111111111111111111111111111111111111111111')
+            old_key2 = old_key1
+            old_key1 = key1
+            
+        # print('111111111111111111111111111111111111111111111111111111111111111111111111111111111')
+        
+        # same_list.append(same)
+        #
+        # dif_list.append(dif)
+        # print(naime_file)
     
-    # same_list.append(same)
-    #
-    # dif_list.append(dif)
-    # print(naime_file)
+    # print('---------------------------------------')
+    # same_list.sort()
+    # lev_list.sort()
+    # prav_list.sort()
+    # same_list.reverse()
+    # lev_list.reverse()
+    # prav_list.reverse()
+    
+    # print('list_dvoek: ',list_dvoek)
+    dvoyki = get_counts(list_dvoek)
+    
+    # print('dvoyki: ', dvoyki)
+    import operator
+    
+    sorted_dvoyki = sorted(dvoyki.items(), key=operator.itemgetter(0))
+    
+    # print('sorted_dvoyki: ', sorted_dvoyki)
+    def vudacha(chislo1,chislo2, spisok):
+        perv = 0
+        vtor = 0
+        tret = 0
+        
+        for item in spisok:
+            if (item[0][0] == chislo1) and (item[0][1] == chislo2):
+               # print("sovpadenie:",item[0][0], item[0][1],item[0][2],item[1])
+               if (item[0][2] == 1) or (item[0][2] == 4) or (item[0][2] == 7)or (item[0][2] == 10)or (
+                        item[0][2] == 13)or (item[0][2] == 16)or (item[0][2] == 19)or (item[0][2] == 22)or (
+                        item[0][2] == 25)or (item[0][2] == 28)or (item[0][2] == 31)or (item[0][2] == 34):
+                   perv = perv + item[1]
+               if (item[0][2] == 2) or (item[0][2] == 5) or (item[0][2] == 8) or (item[0][2] == 11) or (
+                        item[0][2] == 14) or (item[0][2] == 17) or (item[0][2] == 20) or (item[0][2] == 23) or (
+                        item[0][2] == 26) or (item[0][2] == 29) or (item[0][2] == 32) or (item[0][2] == 35):
+                   vtor = vtor + item[1]
+               if (item[0][2] == 3) or (item[0][2] == 6) or (item[0][2] == 9) or (item[0][2] == 12) or (
+                           item[0][2] == 15) or (item[0][2] == 18) or (item[0][2] == 21) or (item[0][2] == 24) or (
+                           item[0][2] == 27) or (item[0][2] == 30) or (item[0][2] == 33) or (item[0][2] == 36):
+                   tret = tret + item[1]
+        list = [perv,vtor,tret]
+        # print('znachenija: ',perv,' ',vtor,' ',tret)
+        return list
+    def normaliz1(chislo1, chislo2, chislo3):
+        vuvod = [0, 0, 0]
+        #############   блок все неравны #########################
+        if (chislo1<chislo2) and (chislo2<chislo3):
+            vuvod[0]=chislo1-chislo3
+            vuvod[1] = chislo2 - chislo3
+            vuvod[2] = chislo3 - chislo3
+            # print('',chislo1-chislo3,'', chislo2 - chislo3,'', chislo3 - chislo3,'')
+        elif (chislo2<chislo1) and (chislo1<chislo3):
+            vuvod[0] = chislo1 - chislo3
+            vuvod[1] = chislo2 - chislo3
+            vuvod[2] = chislo3 - chislo3
+            # print('',chislo1-chislo3,'', chislo2 - chislo3,'', chislo3 - chislo3)# самое большое 3
+        
+        elif (chislo1<chislo3) and (chislo3<chislo2):
+            vuvod[0] = chislo1 - chislo2
+            vuvod[1] = chislo2 - chislo2
+            vuvod[2] = chislo3 - chislo2
+            # print('',chislo1-chislo2,'', chislo2 - chislo2,'', chislo3 - chislo2)
+        elif (chislo3<chislo1) and (chislo1<chislo2):
+            vuvod[0] = chislo1 - chislo2
+            vuvod[1] = chislo2 - chislo2
+            vuvod[2] = chislo3 - chislo2
+            
+            # print('',chislo1-chislo2,'', chislo2 - chislo2,'', chislo3 - chislo2)# самое большое 2
+        
+        elif (chislo1>chislo3) and (chislo3>chislo2):
+            vuvod[0] = chislo1 - chislo1
+            vuvod[1] = chislo2 - chislo1
+            vuvod[2] = chislo3 - chislo1
+            # print('',chislo1-chislo1,'', chislo2 - chislo1,'', chislo3 - chislo1)
+        elif (chislo1 > chislo2) and (chislo2 > chislo3):
+            vuvod[0] = chislo1 - chislo1
+            vuvod[1] = chislo2 - chislo1
+            vuvod[2] = chislo3 - chislo1
+            # print('',chislo1 - chislo1,'', chislo2 - chislo1,'', chislo3 - chislo1)# самое большое 1
+        #############   блок два равны  одно больше равных#########################
 
-print('---------------------------------------')
-# same_list.sort()
-# lev_list.sort()
-# prav_list.sort()
-# same_list.reverse()
-# lev_list.reverse()
-# prav_list.reverse()
 
-# print('list_dvoek: ',list_dvoek)
-dvoyki = get_counts(list_dvoek)
-after18 = get_counts(list_18)
-# print('dvoyki: ', dvoyki)
-import operator
+        elif (chislo1 == chislo2) and (chislo2 < chislo3):
+            vuvod[0] = chislo1 - chislo3
+            vuvod[1] = chislo2 - chislo3
+            vuvod[2] = chislo3 - chislo3
+            # print('', chislo1 - chislo3, '', chislo2 - chislo3, '', chislo3 - chislo3)  # самое большое 3
+    
+        elif (chislo1 == chislo3) and (chislo3 < chislo2):
+            vuvod[0] = chislo1 - chislo2
+            vuvod[1] = chislo2 - chislo2
+            vuvod[2] = chislo3 - chislo2
+            # print('', chislo1 - chislo2, '', chislo2 - chislo2, '', chislo3 - chislo2)  # самое большое 2
+    
+        elif (chislo1 > chislo3) and (chislo3 == chislo2):
+            vuvod[0] = chislo1 - chislo1
+            vuvod[1] = chislo2 - chislo1
+            vuvod[2] = chislo3 - chislo1
+            # print('', chislo1 - chislo1, '', chislo2 - chislo1, '', chislo3 - chislo1)  # самое большое 1
+            #############   блок два равны  одно меньше равных#########################
 
-sorted_dvoyki = sorted(dvoyki.items(), key=operator.itemgetter(1), reverse=True)
-sorted_18 = sorted(after18.items(), key=operator.itemgetter(1), reverse=True)
-print('18: ', podchet_18)
-print('sorted_dvoyki: ', sorted_dvoyki)
-print('sorted 18: ', sorted_18)
-print('itog: ',podchet_balansa2(list_promejutkov))
-# print('pribyl2: ', pribyl2)
-# print('real_pribyl_all: ', real_pribyl)
+        elif (chislo1 == chislo2) and (chislo2 > chislo3):
+            vuvod[0] = chislo1 - chislo2
+            vuvod[1] = chislo2 - chislo2
+            vuvod[2] = chislo3 - chislo2
+            # print('', chislo1 - chislo3, '', chislo2 - chislo3, '', chislo3 - chislo3, '')
+
+        elif (chislo1 == chislo3) and (chislo3 > chislo2):
+            vuvod[0] = chislo1 - chislo3
+            vuvod[1] = chislo2 - chislo3
+            vuvod[2] = chislo3 - chislo3
+            # print('', chislo1 - chislo2, '', chislo2 - chislo2, '', chislo3 - chislo2)  # самое большое 2
+
+        elif (chislo1 < chislo3) and (chislo3 == chislo2):
+            vuvod[0] = chislo1 - chislo3
+            vuvod[1] = chislo2 - chislo3
+            vuvod[2] = chislo3 - chislo3
+        # print('', chislo1 - chislo1, '', chislo2 - chislo1, '', chislo3 - chislo1)  # самое большое 1
+
+        elif (chislo1 == chislo2) and (chislo2 == chislo3):
+                vuvod[0] = chislo1 - chislo1
+                vuvod[1] = chislo2 - chislo1
+                vuvod[2] = chislo3 - chislo1
+                # print('', chislo1 - chislo1, '', chislo2 - chislo1, '', chislo3 - chislo1)  # все равны
+        return vuvod
+    list_of = vudacha(18,19, sorted_dvoyki)
+    summa_of = list_of[0]+list_of[1]+list_of[2]
+    
+    # print('pribyl2: ', pribyl2)
+    # print('real_pribyl_all: ', real_pribyl)
+    for_print =normaliz1(list_of[0], list_of[1], list_of[2])
+    rez_odin = list_of[0] - odin
+    rez_dva = list_of[1] - dva
+    rez_tri = list_of[2] - tri
+    if rez_odin> 0 :
+        rez_odin_str ='+'
+    else:
+        rez_odin_str = ''
+    if rez_dva > 0:
+        rez_dva_str = '+'
+    else:
+        rez_dva_str = ''
+    if rez_tri > 0:
+        rez_tri_str = '+'
+    else:
+        rez_tri_str = ''
+    if (old_summa_of - summa_of) != 0:
+        print('znachenija: ', list_of[0], ' ', list_of[1], ' ', list_of[2],' ',for_print[0],rez_odin_str,'', for_print[1],rez_dva_str,'',for_print[2],rez_tri_str )
+        normaliz1(list_of[0], list_of[1], list_of[2])
+    
+    odin = int(list_of[0])
+    
+    dva = int(list_of[1])
+    
+    tri = int(list_of[2])
+    
+    
+    if vrh_granicu > konecc:
+        cikl_v_rabote = False
+    old_summa_of = summa_of

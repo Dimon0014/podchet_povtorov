@@ -640,7 +640,7 @@ pribul_7 =0
 podchet_7_12 =0
 global_shagi = 0
 list_promejutkov =[]
-for i in range(222, 1634):  # while (ik < 1): # количество файлов
+for i in range(138, 222):  # while (ik < 1): # количество файлов
     # ik = ik + 1
     # file_obj = open('200cikl_ochh.txt', 'w')
     # file_obj.close()
